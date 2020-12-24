@@ -94,7 +94,8 @@ $ajaxUtils.sendGetRequest(
       var homeHtmlToInsertIntoMainPage = insertProperty (homeHtml, 
         `${chosenCategoryShortName}`) 
      
-
+      var randomCategoryShortName = insertProperty(`${chosenCategoryShortName}`)
+      
       insertHtml("#main-content",homeHtmlToInsertIntoMainPage)
 
     },
@@ -167,7 +168,6 @@ dc.loadMenuCategories = function () {
 // Load the menu items view
 // 'categoryShort' is a short_name for a category
 dc.loadMenuItems = function (categoryShort) {
-  debugger
   showLoading("#main-content");
   $ajaxUtils.sendGetRequest(
     menuItemsUrl + categoryShort,
