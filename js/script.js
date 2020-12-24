@@ -84,8 +84,6 @@ showLoading("#main-content");
 $ajaxUtils.sendGetRequest(
   allCategoriesUrl,
   function buildAndShowHomeHTML (categories) {
-  // console.log(categories);
-  // Load home snippet page
   $ajaxUtils.sendGetRequest(
     homeHtmlUrl,
     function (homeHtml) {
@@ -100,7 +98,8 @@ $ajaxUtils.sendGetRequest(
       insertHtml("#main-content",homeHtmlToInsertIntoMainPage)
 
     },
-    false); },
+    false); 
+},
   true);
 });
 // *** finish **
@@ -168,6 +167,7 @@ dc.loadMenuCategories = function () {
 // Load the menu items view
 // 'categoryShort' is a short_name for a category
 dc.loadMenuItems = function (categoryShort) {
+  debugger
   showLoading("#main-content");
   $ajaxUtils.sendGetRequest(
     menuItemsUrl + categoryShort,
