@@ -96,8 +96,9 @@ $ajaxUtils.sendGetRequest(
 
       var homeHtmlToInsertIntoMainPage = insertProperty (homeHtml, 
         `${chosenCategoryShortName}`,`${chosenCategoryName}`) 
+     
 
-
+      insertHtml("#main-content",homeHtmlToInsertIntoMainPage)
 
     },
     false); },
